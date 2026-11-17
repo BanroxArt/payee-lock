@@ -1,0 +1,54 @@
+{
+  "vendors": [
+    {
+      "id": "v-100",
+      "name": "Northwind Paper Co",
+      "country": "US",
+      "email_domains": ["northwind-paper.example"],
+      "contacts": [
+        {"id": "c-100-1", "kind": "phone", "value": "+1 212 555 0142", "on_file_since": "2024-02-01T00:00:00+00:00"},
+        {"id": "c-100-2", "kind": "email", "value": "ar@northwind-paper.example", "on_file_since": "2024-02-01T00:00:00+00:00"}
+      ],
+      "instruments": [
+        {
+          "instrument": {"kind": "us_bank", "routing": "011000015", "account": "4402187731"},
+          "added_at": "2024-02-03T15:00:00+00:00",
+          "added_by": "u-ap1",
+          "verified_at": "2024-02-03T16:10:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "v-200",
+      "name": "Contoso Logistics GmbH",
+      "country": "DE",
+      "email_domains": ["contoso-logistics.example"],
+      "contacts": [
+        {"id": "c-200-1", "kind": "phone", "value": "+1 646 555 0177", "on_file_since": "2023-06-10T00:00:00+00:00"}
+      ],
+      "instruments": [
+        {
+          "instrument": {"kind": "iban", "iban": "DE89 3704 0044 0532 0130 00"},
+          "added_at": "2023-06-12T09:00:00+00:00",
+          "added_by": "u-ap2"
+        }
+      ]
+    },
+    {
+      "id": "v-300",
+      "name": "Fabrikam Settlement Desk",
+      "country": "US",
+      "email_domains": ["fabrikam.example"],
+      "contacts": [
+        {"id": "c-300-1", "kind": "phone", "value": "+1 415 555 0110", "on_file_since": "2025-01-15T00:00:00+00:00"}
+      ],
+      "instruments": [
+        {
+          "instrument": {"kind": "evm", "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed", "chain_id": 1},
+          "added_at": "2025-01-20T12:00:00+00:00",
+          "added_by": "u-tr1"
+        }
+      ]
+    }
+  ]
+}

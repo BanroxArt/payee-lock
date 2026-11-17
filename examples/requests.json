@@ -1,0 +1,43 @@
+[
+  {
+    "id": "pay-001",
+    "vendor_id": "v-100",
+    "amount_cents": 1840000,
+    "rail": "rtp",
+    "instrument": {"kind": "us_bank", "routing": "011000015", "account": "4402187731"},
+    "requested_at": "2026-11-16T15:00:00+00:00",
+    "initiator": "u-ap1",
+    "sender": "ar@northwind-paper.example"
+  },
+  {
+    "id": "pay-002",
+    "vendor_id": "v-100",
+    "amount_cents": 4825000,
+    "rail": "wire",
+    "instrument": {"kind": "us_bank", "routing": "021000021", "account": "9917730045"},
+    "requested_at": "2026-11-16T15:00:00+00:00",
+    "initiator": "u-ap1",
+    "sender": "ar@northwind-paper.example",
+    "change": {
+      "received_at": "2026-11-16T09:12:00+00:00",
+      "via": "email",
+      "sender": "ar@northwind-paper.example",
+      "contact_supplied": "+1 212 555 0199"
+    },
+    "callbacks": [
+      {"id": "cb-1", "at": "2026-11-16T10:00:00+00:00", "by": "u-ap1", "dialed": "212-555-0199", "outcome": "confirmed", "read_back": true}
+    ],
+    "approvals": [{"by": "u-ctl1", "at": "2026-11-16T15:05:00+00:00"}]
+  },
+  {
+    "id": "pay-003",
+    "vendor_id": "v-200",
+    "amount_cents": 912000,
+    "rail": "wire",
+    "instrument": {"kind": "iban", "iban": "GB82 WEST 1234 5698 7654 32"},
+    "requested_at": "2026-11-16T15:00:00+00:00",
+    "initiator": "u-ap2",
+    "sender": "billing@contoso-logistlcs.example",
+    "change": {"received_at": "2026-11-14T08:00:00+00:00", "via": "email", "sender": "billing@contoso-logistlcs.example"}
+  }
+]

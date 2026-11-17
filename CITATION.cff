@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+type: software
+title: payee-lock
+abstract: >-
+  Pre-send guard for irreversible payments that detects changed payee details
+  and enforces call-back, cooling-off and dual approval, with a hash-chained
+  audit log. Engineering checklist, not legal advice.
+authors:
+  - family-names: Akopian
+    given-names: Art
+    affiliation: Banrox Inc.
+    email: opensource@banrox.com
+repository-code: https://github.com/BanroxArt/payee-lock
+license: MIT
+version: 0.1.0
+date-released: 2026-11-16
+keywords:
+  - business-email-compromise
+  - payments-fraud
+  - fednow
+  - rtp

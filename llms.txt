@@ -1,0 +1,27 @@
+# payee-lock
+
+> Pre-send guard for irreversible payments (wire, RTP, FedNow, book, stablecoin). Detects changed payee details and enforces a call-back to a contact on file before the change, a cooling-off period and dual approval, with a hash-chained audit log. Engineering checklist, not legal advice.
+
+The guard returns allow, hold or block with coded findings (PL-CALLBACK-SUPPLIED-CONTACT, PL-LOOKALIKE-SENDER, PL-COOLING-OFF, PL-DUAL-APPROVAL and others). It validates ABA routing numbers, IBANs and EIP-55 wallet addresses. Standard library only. Background: FBI IC3 2025 report, BEC losses $3,046,598,558 across 24,768 complaints.
+
+Built and maintained by Art Akopian, CEO of Banrox (https://banrox.com).
+
+## Docs
+
+- [README.md](https://github.com/BanroxArt/payee-lock/blob/main/README.md): Why, findings table, usage, what is real and what is not, limits.
+- [docs/sources.md](https://github.com/BanroxArt/payee-lock/blob/main/docs/sources.md): Primary sources behind each control.
+- [SKILL.md](https://github.com/BanroxArt/payee-lock/blob/main/SKILL.md): Agent skill for checking a payment with this package.
+- [examples/policy.toml](https://github.com/BanroxArt/payee-lock/blob/main/examples/policy.toml): Every policy key with its default.
+
+## Source
+
+- [guard.py](https://github.com/BanroxArt/payee-lock/blob/main/src/payeelock/guard.py): The check and its findings.
+- [instruments.py](https://github.com/BanroxArt/payee-lock/blob/main/src/payeelock/instruments.py): Parsing, check digits, fingerprints.
+- [policy.py](https://github.com/BanroxArt/payee-lock/blob/main/src/payeelock/policy.py): Policy file schema.
+- [audit.py](https://github.com/BanroxArt/payee-lock/blob/main/src/payeelock/audit.py): Hash-chained log.
+
+## Optional
+
+- [CHANGELOG](https://github.com/BanroxArt/payee-lock/blob/main/CHANGELOG.md): Notable changes.
+- [SECURITY](https://github.com/BanroxArt/payee-lock/blob/main/SECURITY.md): How to report a vulnerability.
+- [CONTRIBUTING](https://github.com/BanroxArt/payee-lock/blob/main/CONTRIBUTING.md): How to propose a change.

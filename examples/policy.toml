@@ -1,0 +1,28 @@
+# Example policy. Every key is optional; these are the defaults spelled out.
+irreversible_rails = ["wire", "rtp", "fednow", "stablecoin", "book"]
+
+[cooling_off]
+default_hours = 24
+tiers = [
+  { min_cents = 2500000, hours = 48 },   # $25,000 and up
+  { min_cents = 10000000, hours = 72 },  # $100,000 and up
+]
+
+[callback]
+recent_days = 30            # a destination added within this many days still needs a call-back
+max_age_hours = 72          # the call-back must be this fresh at send time
+contact_min_age_days = 30   # the number dialed must have been on file this long before the change
+require_read_back = true
+
+[dual_approval]
+threshold_cents = 2500000
+approvers = 2
+exclude_initiator = true
+exclude_instrument_editor = true
+
+[checks]
+lookalike_max_distance = 2
+country_change = "hold"
+shared_instrument = "block"
+unchecksummed_evm = "hold"
+unknown_sender = "hold"
